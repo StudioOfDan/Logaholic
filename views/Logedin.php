@@ -4,6 +4,6 @@
 include '../views/header.php';
 
     //Navigatie
-include '../views/nav.php';
+//include '../views/nav.php';
     //content
 include '../views/content.php';
