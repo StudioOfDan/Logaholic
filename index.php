@@ -1,11 +1,7 @@
 <?php
-// De keys
-define('API_KEY',      '77zyca2yjdst0v'                                          );
-define('API_SECRET',   'WHfNYw9HzPcXWfjO'                                       );
+//configuration ( API KEYS DEFINED )
+include "includes/config.php";
 
-// You must pre-register your redirect_uri at https://www.linkedin.com/secure/developer
-define('REDIRECT_URI', 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME']);
-define('SCOPE',        'r_basicprofile r_emailaddress'                              );
 
 // You'll probably use a database
 session_name('linkedin');
@@ -36,10 +32,17 @@ if (isset($_GET['error'])) {
     }
 }
 
-// Congratulations! You have a valid token. Now fetch your profile
-$user = fetch('GET', '/v1/people/~:(firstName,lastName)');
-print "Hello $user->firstName $user->lastName.";
-exit;
+
+//includes data views
+include "views/header.php";
+
+//includes data views
+include "views/nav.php";
+
+//content data
+include "views/content.php";
+
+
 
 function getAuthorizationCode() {
     $params = array(
