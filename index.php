@@ -33,15 +33,6 @@ if (isset($_GET['error'])) {
 }
 
 
-//includes data views
-include "views/header.php";
-
-//includes data views
-include "views/nav.php";
-
-//content data
-include "views/content.php";
-
 
 
 function getAuthorizationCode() {
@@ -93,7 +84,7 @@ function getAccessToken() {
     // Store access token and expiration time
     $_SESSION['access_token'] = $token->access_token; // guard this!
     $_SESSION['expires_in']   = $token->expires_in; // relative time (in seconds)
-    $_SESSION['expires_at']   = time() + $_SESSION['expires_in']; // absolute time
+    $_SESSION['expires_at']   = time() + $_SESSION['expires']; // absolute time
 
     return true;
 }
@@ -124,3 +115,15 @@ function fetch($method, $resource, $body = '') {
     // Native PHP object, please
     return json_decode($response);
 }
+//includes data views
+include "views/header.php";
+
+//includes data views
+include "views/nav.php";
+
+//sidebar
+include "views/sidebar.php";
+
+//content data
+include "views/content.php";
+
