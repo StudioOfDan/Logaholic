@@ -110,7 +110,7 @@ function fetch($method, $resource, $body = '') {
 
     // Need to use HTTPS
     $url = 'https://api.linkedin.com' . $resource;
-
+    $params = "";
     // Append query parameters (if there are any)
     if (count($params)) { $url .= '?' . http_build_query($params); }
 
