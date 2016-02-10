@@ -6,7 +6,6 @@
     margin: 0 auto;
 }
 .maincontainer{
-    margin-top: 50px;
 }
 h1{
     color:#000;
@@ -16,9 +15,11 @@ h1{
     font-size:1em;
 }
 .image{
-    text-align: center;
+    text-align: left;
 }
 .sidebar{
+    -webkit-transition: all 0.5s ;
+    text-align: center;
     padding-left:0px!important;
     padding-right:0px!important;
     float: left;
@@ -30,23 +31,54 @@ h1{
     text-align:center;
     font-size:1em
 }
-.sidebar ul {
-    padding-left: 0px;
+
+.sidebar-nav {
+    -webkit-transition: all 0.5s ;
+    top: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    text-align: center;
 }
-.sidebar ul:hover {
 
-    padding-left: 0px;
-
-    list-style: none;
-    text-align: center;
+.sidebar-nav li {
+    line-height: 40px;
 }
-.sidebar ul li {
-    margin-bottom: 5px;
-    -webkit-transition: all 0.5s;
-    background-color: #cdcdcd;
-    padding: 17px;
-    list-style: none;
 
+.sidebar-nav li a {
+    -webkit-transition: all 0.5s ;
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    -webkit-transition: all 0.5s ;
+    text-decoration: none;
+    color: #878585;
+    background: #e1e1e1;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+.open>.dropdown-menu{
+    width: 100%!important;
 }

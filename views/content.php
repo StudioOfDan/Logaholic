@@ -1,8 +1,13 @@
 <?php
 //haalt de gegevens op
-$user = fetch('GET', '/v1/people/~:(firstName,lastName,headline,location,email-address,picture-urls::(original),num-connections,id)');
+$user = fetch('GET', '/v1/people/~:(firstName,lastName,headline,location,email-address,picture-urls::(original),num-connections,id,phonetic-first-name,current-share,specialties)');
 ?>
 <body>
+<?php
+function closeSession(){
+IN.User.logout();
+}?>
+
     <div class="col-xs-10 maincontainer">
         <div class="container">
         <h1>The Logaholic Analytics</h1>
@@ -19,9 +24,9 @@ $user = fetch('GET', '/v1/people/~:(firstName,lastName,headline,location,email-a
             </thead>
             <tbody>
             <tr>
-                <pre>
-                <?php print_r($user);?>
-                    </pre>
+<!--                <pre>-->
+<!--                --><?php //print_r($user);?>
+<!--                    </pre>-->
                 <td><?php echo $user->firstName ?></td>
                 <td><?php echo $user->lastName ?></td>
                 <td><?php echo $user->emailAddress ?></td>
