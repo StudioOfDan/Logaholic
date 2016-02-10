@@ -113,34 +113,24 @@ function fetch($method, $resource, $body = '') {
     // Native PHP object, please
     return json_decode($response);
 }
+//includes data views
+include "views/header.php";
+
+//includes data views
+include "views/nav.php";
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 switch ($page) {
     case 'home':
-//includes data views
-        include "views/header.php";
 
-//includes data views
-        include "views/nav.php";
 
 //content data
         include "views/content.php";
 
         break;
-
-
-    case 'mywork':
-        include 'views/nav.php';
-        require 'logic/select_articles.php';
-        break;
-
-
-    case 'detailpage';
-        include 'views/nav.php';
-        $id = $_GET['id'];
-        require 'logic/select_articles_single.php';
-        include 'views/articles_single.php' ;
-        include 'views/footer.php';
+    case 'stats';
+//includes data views
+        include "views/nav.php";
         break;
 
     default:
