@@ -2,7 +2,6 @@
 //configuration ( API KEYS DEFINED )
 include "includes/config.php";
 
-
 // You'll probably use a database
 session_name('linkedin');
 session_start();
@@ -90,8 +89,7 @@ function getAccessToken() {
 }
 
 function fetch($method, $resource, $body = '') {
-    print $_SESSION['access_token'];
-
+//    print $_SESSION['access_token'];
     $opts = array(
         'http'=>array(
             'method' => $method,
@@ -120,9 +118,6 @@ include "views/header.php";
 
 //includes data views
 include "views/nav.php";
-
-//sidebar
-include "views/sidebar.php";
 
 //content data
 include "views/content.php";

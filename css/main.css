@@ -9,13 +9,44 @@
     margin-top: 50px;
 }
 h1{
+    color:#000;
     font-family: 'Montserrat', sans-serif!important;
     letter-spacing: normal;
     text-transform: uppercase;
+    font-size:1em;
 }
 .image{
     text-align: center;
 }
-.navbar-header{
-    float: right!important;
+.sidebar{
+    padding-left:0px!important;
+    padding-right:0px!important;
+    float: left;
+    width: 10%;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+.sidebar h1{
+    text-align:center;
+    font-size:1em
+}
+.sidebar ul {
+    padding-left: 0px;
+    list-style: none;
+    text-align: center;
+}
+.sidebar ul:hover {
+
+    padding-left: 0px;
+
+    list-style: none;
+    text-align: center;
+}
+.sidebar ul li {
+    margin-bottom: 5px;
+    -webkit-transition: all 0.5s;
+    background-color: #cdcdcd;
+    padding: 17px;
+    list-style: none;
+
 }
